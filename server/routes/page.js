@@ -14,4 +14,17 @@ pageRoutes.route("/user").get(function (req, res) {
     });
 });
 
+pageRoutes.route("/user/add").post(function (req, response) {
+  let db_connect = db.getDb();
+  let userObj = {
+    name: req.body.name,
+    email: req.body.email,
+    password: req.body.password,
+  };
+  db_connect.collection("users").insertOne(userObj, function (err, res) {
+    if (err) throw err;
+    response.json(res);
+  });
+});
+
 module.exports = pageRoutes;
