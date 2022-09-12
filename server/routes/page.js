@@ -45,4 +45,14 @@ pageRoutes.route("/user/update").post(function (req, response) {
     });
 });
 
+pageRoutes.route("/user/delete/:id").delete((req, response) => {
+  let db_connect = db.getDb();
+  let myQuery = { _id: ObjectId(req, params.id) };
+  db_connect.collection("users").deleteOne(myQuery, function (err, obj) {
+    if (err) throw err;
+    console.log("User deleted");
+    response.json(obj);
+  });
+});
+
 module.exports = pageRoutes;
