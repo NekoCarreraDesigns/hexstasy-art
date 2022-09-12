@@ -27,4 +27,22 @@ pageRoutes.route("/user/add").post(function (req, response) {
   });
 });
 
+pageRoutes.route("/user/update").post(function (req, response) {
+  let db_connect = db.getDb();
+  let myQuery = { _id: ObjectId(req.params.id) };
+  let newValues = {
+    $set: {
+      name: req.body.name,
+      email: req.body.email,
+    },
+  };
+  db_connect
+    .collection("users")
+    .updateOne(myQuery, newValues, function (err, res) {
+      if (err) throw err;
+      console.log("User updated");
+      response.json(res);
+    });
+});
+
 module.exports = pageRoutes;
