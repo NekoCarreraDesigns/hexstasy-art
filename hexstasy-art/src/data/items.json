@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Drinks",
+        "price": 22.59,
+        "imgURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYxNbZRuIODRRxawJ54S0OjmSsf68CHyjtGg&usqp=CAU/" 
+    },
+    {
+        "id": 2,
+        "name": "Laptop",
+        "price": 1300,
+        "imgURL": "/public/images/laptop.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Pineapple",
+        "price": 4,
+        "imgURL": "/public/images/pineapple.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Vinyl Record",
+        "price": 40,
+        "imgURL": "/public/images/vinyl.jpg"
+    }
+]
