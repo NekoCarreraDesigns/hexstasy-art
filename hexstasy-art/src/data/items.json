@@ -1,26 +1,26 @@
 [
     {
         "id": 1,
-        "name": "Drinks",
-        "price": 22.59,
-        "imgURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYxNbZRuIODRRxawJ54S0OjmSsf68CHyjtGg&usqp=CAU/" 
+        "name": "Ocean Waves",
+        "price": 70,
+        "imgURL": "./images/Artwork_one.jpg" 
     },
     {
         "id": 2,
-        "name": "Laptop",
+        "name": "Moonbeams",
         "price": 1300,
-        "imgURL": "/public/images/laptop.jpg"
+        "imgURL": "./images/Artwork_two.jpg"
     },
     {
         "id": 3,
-        "name": "Pineapple",
-        "price": 4,
-        "imgURL": "/public/images/pineapple.jpg"
+        "name": "Glorious Sunrise",
+        "price": 100,
+        "imgURL": "./images/Artwork_three.jpg"
     },
     {
         "id": 4,
-        "name": "Vinyl Record",
-        "price": 40,
-        "imgURL": "/public/images/vinyl.jpg"
+        "name": "Vital Rays",
+        "price": 200,
+        "imgURL": "./images/Artwork_four.jpg"
     }
 ]
