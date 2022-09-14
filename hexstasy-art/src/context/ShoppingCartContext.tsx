@@ -2,7 +2,7 @@ import { createContext, ReactNode, useContext, useState } from "react";
 import { ShoppingCart } from "../components/ShoppingCart";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
-const ShoppingCartContext = createContext({} as ShoppingCartContext);
+const ShoppingCartContexts = createContext({} as ShoppingCartContext);
 
 type ShoppingCartProviderProps = {
   children: ReactNode;
@@ -25,7 +25,7 @@ type CartItem = {
 };
 
 export function useShoppingCart() {
-  return useContext(ShoppingCartContext);
+  return useContext(ShoppingCartContexts);
 }
 
 export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
@@ -86,7 +86,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
   }
 
   return (
-    <ShoppingCartContext.Provider
+    <ShoppingCartContexts.Provider
       value={{
         getItemQuantity,
         decreaseCartQuantity,
@@ -99,6 +99,6 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
       }}>
       {children}
       <ShoppingCart isOpen={isOpen} />
-    </ShoppingCartContext.Provider>
+    </ShoppingCartContexts.Provider>
   );
 }
