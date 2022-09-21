@@ -3,8 +3,8 @@ const app = express();
 const cors = require("cors");
 require("dotenv").config({ path: "./config.env" });
 const port = process.env.PORT || 3000;
-require("./app/routes/auth.routes").app();
-require("./app/routes/user.routes").app();
+require("./routes/auth.routes");
+require("./routes/user.routes");
 
 app.use(cors());
 app.use(express.json());
